@@ -33,7 +33,7 @@ const App = () => {
 
     const handleScroll = async () => {
         if (
-            window.innerHeight + document.documentElement.scrollTop ===
+            window.innerHeight + document.documentElement.scrollTop + 1 >=
             document.documentElement.scrollHeight
         ) {
             setLoading(true);
