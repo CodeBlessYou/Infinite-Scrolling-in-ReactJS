@@ -13,7 +13,6 @@ const App = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
         setTimeout(async () => {
             const response = await axios.get(
                 `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=12&page=${page}&sparkline=false`
@@ -37,6 +36,7 @@ const App = () => {
             window.innerHeight + document.documentElement.scrollTop ===
             document.documentElement.scrollHeight
         ) {
+            setLoading(true);
             setPage((prev) => prev + 1);
         }
     };
