@@ -34,12 +34,11 @@ const App = () => {
 
     const handleScroll = async () => {
         if (
-            window.innerHeight + document.documentElement.scrollTop ==
+            window.innerHeight + document.documentElement.scrollTop ===
             document.documentElement.scrollHeight
         ) {
-            await setPage((prev) => prev + 1);
+            setPage((prev) => prev + 1);
         }
-        return;
     };
 
     return (
